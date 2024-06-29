@@ -35,7 +35,9 @@ function onEachFeature(feature, layer) {
 
 // Function to create a customized marker for each earthquake feature
 function createCustomMarker(feature, latlng) {
-    return L.circleMarker(latlng, {
+    
+    // Create the marker
+    var marker = L.circleMarker(latlng, {
         radius: getRadius(feature.properties.mag),
         fillColor: getColor(feature.geometry.coordinates[2]),
         color: "#000",
@@ -43,6 +45,16 @@ function createCustomMarker(feature, latlng) {
         opacity: 1,
         fillOpacity: 0.7
     });
+
+    // Bind a tooltip to the marker
+    marker.bindTooltip(
+        `<b>Magnitude:</b> ${feature.properties.mag}<br>
+         <b>Location:</b> ${feature.properties.place}<br>
+         <b>Depth:</b> ${feature.geometry.coordinates[2]} km`,
+        {permanent: false, direction: 'auto'}
+    );
+
+    return marker;
 }
 
 // Function to determine marker size based on earthquake magnitude
@@ -57,7 +69,7 @@ function getColor(depth) {
            depth > 50 ? '#FF8C00' : // Dark Orange
            depth > 30 ? '#FFD700' : // Light Yellow
            depth > 10 ? '#B5E61D' : // Light Olive
-                        '#39FF14' ; // Green
+                        '#39FF14' ; // Green for the shallowest
 }
 
 // Function to add a legend to the map
