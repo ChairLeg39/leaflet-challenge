@@ -1,10 +1,10 @@
-# leaflet-challenge
+# leaflet-challenge 🌍
 KU Boot Camp Module 15 Challenge
 
 Welcome to the Leaflet Earthquake Visualization GitHub repository! This project visualizes earthquake data provided by the United States Geological Survey (USGS) using interactive maps built with Leaflet.
 
 ## Background 📜
-The United States Geological Survey (USGS) is responsible for providing scientific data about natural hazards, ecosystem and environmental health, and the impacts of climate and land-use change. They are interested in building new tools to visualize their earthquake data to better educate the public and other government organizations.
+The USGS is responsible for providing scientific data about natural hazards, ecosystem and environmental health, and the impacts of climate and land-use change. They are interested in building new tools to visualize their earthquake data to better educate the public and other government organizations.
 
 ## Repository Structure 🗂
 
@@ -12,6 +12,7 @@ The United States Geological Survey (USGS) is responsible for providing scientif
 - **Leaflet-Part-1/static
     - **css/style.css**: Contains styles for the visualization.
     - **js/logic-lee.js**: Contains JavaScript code for fetching data and building visualizations.
+- **images**: Contains screenshots of images for the README.
 
 ## Instructions 📝
 The instructions for this activity were broken into two parts:
@@ -26,14 +27,10 @@ The first task was to visualize an earthquake dataset. The following steps were 
 1. **Get the dataset:**
     * The USGS provides earthquake data in various formats, updated every 5 minutes. The [USGS GeoJSON Feed](https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php) page was visited and a dataset was chosen to visualize. The "All Earthquakes from the Past 7 Days" dataset was used.
     * Example screenshot of the dataset selection page:
-      ```
       ![GeoJSON Summary Format](images/GeoJSON_Summary_Format.png)<br>
-      ```
     * Upon clicking a dataset (such as "All Earthquakes from the Past 7 Days"), a JSON representation of that data was provided. The URL of this JSON was used to pull in the data for the visualization by expliciting adding the URL to the `logic-lee.js` file.
     * Example screenshot of earthquake data in JSON format:
-      ```
       ![All Earthquakes for the Past 7 Days](images/Past_7_Days_JSON.png)<br>
-      ```
 
 2. **Import and visualize the data:**
     * 🌍 Using Leaflet, a map was created that plots all the earthquakes from the dataset based on their longitude and latitude.
@@ -42,9 +39,7 @@ The first task was to visualize an earthquake dataset. The following steps were 
     * 💬 Popups were included to provide additional information about the earthquake when its associated marker is clicked.
     * 🗺️ A legend was created to provide context for the map data.
     * Example of the map visualization:
-      ```
       ![Part 1 Visualization](images/Part_1_Visualization.png)<br>
-      ```
 
 ### Part 2: Gather and Plot More Data (Optional)
 > **Note:** This part was not completed and will be completed at a later date.
@@ -61,6 +56,4 @@ Plot a second dataset on the map to illustrate the relationship between tectonic
     * 🔄 Put each dataset into separate overlays that can be turned on and off independently.
     * 🔧 Add layer controls to the map.
     * Example of the combined map visualization:
-      ```
       ![Part 2 Visualization](images/Part_2_Visualization_Example.png)<br>
-      ```
